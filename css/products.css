@@ -1,0 +1,185 @@
+/* Products-Block */
+.products-block {
+  background-image: url(/images/productscoffee.jpg);
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Murecho', sans-serif;
+  height: auto;
+  color: #271809;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-rows: repeat(5, auto);
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-content: center;
+  gap: 20px;
+}
+
+.products-block__header {
+  margin-top: 40px;
+  font-size: 1.6rem;
+  padding: 20px 10px;
+  letter-spacing: 1.5px;
+  background: rgb(36, 16, 0);
+  background: linear-gradient(132deg,
+      rgba(36, 16, 0, 1) 0%,
+      rgba(222, 121, 34, 1) 10%,
+      rgb(182, 108, 39) 100%);
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.products-block__header h2 {
+  text-align: center;
+  font-size: 3rem;
+  padding: 20px 0;
+  font-weight: 500;
+}
+
+.menu-header {
+  padding: 10px 20px;
+  background: rgb(36, 16, 0);
+  background: linear-gradient(132deg,
+      rgba(36, 16, 0, 1) 0%,
+      rgba(222, 121, 34, 1) 10%,
+      rgba(182, 108, 39) 100%);
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.box__item-list {
+  font-size: 1.6rem;
+  background: rgb(36, 16, 0);
+  background: linear-gradient(132deg,
+      rgba(36, 16, 0, 1) 0%,
+      rgba(222, 121, 34, 1) 10%,
+      rgb(182, 108, 39) 100%);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.item-header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.box__item-list h2 {
+  font-size: 3rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  padding: 10px;
+}
+
+.box__item-list ul {
+  list-style: none;
+  padding: 0 10px;
+  margin-top: 10px;
+  line-height: 1.8;
+}
+
+.sidebar__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 12px;
+  font-size: 1.6rem;
+  border-radius: 5px;
+  overflow: hidden;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.sidebar > h2 {
+  background: rgb(36, 16, 0);
+  background: linear-gradient(132deg,
+      rgba(36, 16, 0, 1) 0%,
+      rgba(222, 121, 34, 1) 10%,
+      rgba(182, 108, 39) 100%);
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  margin-top: 15px;
+  border-radius: 5px;
+}
+
+.sidebar__image {
+  background-size: cover;
+  border-radius: 5px;
+  height: 350px;
+}
+
+.sidebar__image h2 {
+  font-weight: 400;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 5px 5px 0 0;
+}
+
+.sidebar__image:hover {
+  opacity: 0.9;
+  transition: opacity 0.3s;
+}
+
+.sidebar__image1 {
+  background-image: url(/images/beans_shop@600px.jpg);
+}
+
+.sidebar__image2 {
+  background-image: url(/images/coffee_package@600px.jpg);
+  max-width: 200px;
+}
+
+@media screen and (min-width: 1024px) {
+  .content-grid {
+    grid-template-columns: 70fr 30fr;
+    grid-template-rows: 10fr auto auto auto;
+    grid-template-areas:
+      "header  header"
+      "menu1   sidebar"
+      "menu2   sidebar"
+      "menu3   sidebar";
+  }
+
+  .sidebar__content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .sidebar > h2 {
+    margin-top: 0;
+  }
+
+  .sidebar__image {
+    height: 400px;
+    max-width: 100%;
+  }
+
+  .box-one {
+    grid-area: header;
+  }
+
+  .box-two {
+    grid-area: menu1;
+  }
+
+  .box-three {
+    grid-area: menu2;
+  }
+
+  .box-four {
+    grid-area: menu3;
+    margin-bottom: 50px;
+  }
+
+  .box-five {
+    grid-area: sidebar;
+  }
+}
